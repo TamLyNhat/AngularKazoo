@@ -1,0 +1,18 @@
+<table class="table table-sm">
+  <thead>
+    <td>Callee</td>
+    <td>Caller</td>
+    <td></td>
+  </thead>
+  <ng-container *ngFor="let caller of CallerArray">
+    <tr class="table-dark">
+      <td>{{caller.calleeNum}}</td>
+      <td>{{caller.callerNum}}</td>
+      <td>
+        <button class="btn btn-outline-info" (click)="callerService.populateForm(caller)">Edit</button>
+        <button class="btn btn-outline-danger" (click)="onDelete(caller.$key)">Delete</button>
+      </td>
+    </tr>
+ </ng-container>
+
+</table>
